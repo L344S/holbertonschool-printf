@@ -103,6 +103,9 @@ int _printf(const char *format, ...)
 
 int main(void)
 {
-	int TestVariable = 10;
-	_printf("Test %s\n", TestVariable);
+    int TestVariable0 = 10;
+    _printf("Test %d\n", TestVariable0);
+    char *TestVariable1 = "Hello World";
+    _printf("Test %s\n", TestVariable1);
+    return 0;
 }
