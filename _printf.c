@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 /**
  * _printf - function that produces output according to a format.
@@ -78,4 +81,10 @@ int _printf(const char *format, ...)
 
 	/*on return comme demandé la nombre de caractère imprimer*/
 	return (strFormat_leng);
+}
+
+int main(void)
+{
+	char *TestVariable = "hello world";
+	_printf("Test %s\n", TestVariable);
 }
