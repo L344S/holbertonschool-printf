@@ -65,6 +65,26 @@ int _printf(const char *format, ...)
 				/* on incrémente notre variable en y ajoutant la longueur de la string*/
 				strFormat_leng = strFormat_leng + len_string;
 			}
+			else if (format[index] == 'd')
+			{
+				/* on récupère la valeur en argument attribué à d (un entier) */
+				int integer = va_arg(arguments_list, int);
+
+				/* Convertissez l'entier en une chaîne de caractères à l'aide de snprintf */
+				char buffer[12]; // Suffisamment grand pour stocker un int
+				int len_integer = snprintf(buffer, sizeof(buffer), "%d", integer);
+
+				/* Vérifiez si la conversion s'est déroulée avec succès */
+				if (len_integer < 0 || len_integer >= sizeof(buffer)) {
+					// Gestion de l'erreur ici si la conversion a échoué
+				}
+
+				/* Affichez la chaîne de caractères représentant l'entier */
+				write(1, buffer, len_integer);
+
+				/* Incrémente strFormat_leng en ajoutant la longueur de la chaîne de caractères */
+				strFormat_leng = strFormat_leng + len_integer;
+			}
 			else if (format[index] == '%')
 			{
 				/* utlisation de la fonction write pour display le texte dans stdout*/
@@ -83,6 +103,6 @@ int _printf(const char *format, ...)
 
 int main(void)
 {
-	char *TestVariable = "hello world";
+	int TestVariable = 10;
 	_printf("Test %s\n", TestVariable);
 }
