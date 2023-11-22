@@ -49,6 +49,15 @@ int main(void)
     return 0;
 }
 ```
+## Requirements for Installation and Execution
+
+To install and run this program, ensure you have the following:
+
+- **Operating System:** Ubuntu 20.04 LTS
+- **Compiler:** gcc
+- **Compiler Options:** `-Wall -Werror -Wextra -pedantic -std=gnu89`
+
+```
 ## Installation
 
 Use the following command to install the custom `_printf` function:
@@ -70,6 +79,16 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o printf
 # Display the man page of the _printf function
 man ./_printf.3.gz
 ```
+## Contributing
+
+Feel free to contribute to this project by following these steps:
+
+1. **Fork the repository.**
+2. **Create a new branch.**
+3. **Make your changes.**
+4. **Commit your changes.**
+5. **Push to the branch.**
+6. **Submit a pull request.**
 
 ## Authors
 
