@@ -4,38 +4,6 @@
 
 This is a collaborative project created by a group of students. The goal is to implement a custom version of the `printf` function in C. The project is part of the curriculum at Holberton School.
 
-## Project Links
-- [\_printf.c](https://github.com/L344S/holbertonschool-printf/blob/main/_printf.c)
-- [handle_character.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_character.c)
-- [handle_format.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_format.c)
-- [handle_integer.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_integer.c)
-- [handle_percent.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_percent.c)
-- [handle_string.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_string.c)
-
-## Project Structure
-
-The project is organized into multiple files, each serving a specific purpose:
-
-- **_printf.c**: The main file containing the custom `_printf` function.
-- **handle_character.c**: File handling the character conversion specifier.
-- **handle_format.c**: File managing the format specifier.
-- **handle_integer.c**: File dealing with the integer conversion specifier.
-- **handle_percent.c**: File for handling the percent symbol conversion specifier.
-- **handle_string.c**: File for handling the string conversion specifier.
-
-## How to Use
-
-To use the custom `_printf` function, include the "main.h" header file in your C program and call the function with the desired format string.
-
-```
-#include "main.h"
-
-int main(void)
-{
-    _printf("Hello, %s!\n", "World");
-    return 0;
-}
-```
 ## Requirements
 
 - All files will be compiled on Ubuntu 20.04 LTS using gcc with the options `-Wall -Werror -Wextra -pedantic -std=gnu89`.
@@ -58,6 +26,25 @@ int main(void)
 - `va_copy` (man 3 va_copy)
 - `va_arg` (man 3 va_arg)
 
+## Project Links
+- [\_printf.c](https://github.com/L344S/holbertonschool-printf/blob/main/_printf.c)
+- [handle_character.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_character.c)
+- [handle_format.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_format.c)
+- [handle_integer.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_integer.c)
+- [handle_percent.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_percent.c)
+- [handle_string.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_string.c)
+
+## Project Structure
+
+The project is organized into multiple files, each serving a specific purpose:
+
+- **_printf.c**: The main file containing the custom `_printf` function.
+- **handle_character.c**: File handling the character conversion specifier.
+- **handle_format.c**: File managing the format specifier.
+- **handle_integer.c**: File dealing with the integer conversion specifier.
+- **handle_percent.c**: File for handling the percent symbol conversion specifier.
+- **handle_string.c**: File for handling the string conversion specifier.
+
 ## Functionality
 
 - The `_printf` function returns the number of characters printed (excluding the null byte used to end output to strings).
@@ -65,6 +52,20 @@ int main(void)
 - The format string is composed of zero or more directives.
 - Handle the following conversion specifiers: `c`, `s`, `%`.
 - Additionally, handle the conversion specifiers: `d`, `i`.
+
+## How to Use
+
+To use the custom `_printf` function, include the "main.h" header file in your C program and call the function with the desired format string.
+
+```
+#include "main.h"
+
+int main(void)
+{
+    _printf("Hello, %s!\n", "World");
+    return 0;
+}
+```
 
 ## Note
 
