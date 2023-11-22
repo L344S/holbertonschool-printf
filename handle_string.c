@@ -8,6 +8,7 @@
 int handle_string(va_list arguments_list)
 {
 	char *string = va_arg(arguments_list, char*);
+	int len_string;
 
 	if (string == NULL)
 	{
@@ -15,7 +16,7 @@ int handle_string(va_list arguments_list)
 		return (6);
 	}
 
-	int len_string = strlen(string);
+	len_string = strlen(string);
 
 	write(1, string, len_string);
 
