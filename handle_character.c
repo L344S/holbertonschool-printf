@@ -8,6 +8,8 @@
 int handle_character(va_list arguments_list)
 {
 	char c = va_arg(arguments_list, int);
+
 	write(1, &c, 1);
+
 	return (1);
 }

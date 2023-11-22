@@ -27,5 +27,5 @@ int handle_format(char format, va_list arguments_list)
 		strFormat_leng = strFormat_leng + handle_integer(arguments_list);
 	}
 
-	return strFormat_leng;
+	return (strFormat_leng);
 }

@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			index++;
-			strFormat_leng = strFormat_leng + handle_format(format[index], arguments_list);
+			strFormat_leng += handle_format(format[index], arguments_list);
 		}
 	}
 
