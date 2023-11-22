@@ -46,7 +46,7 @@ int main(void)
     /* Combining multiple format specifiers */
     _printf("Nicknamed %s, she was one of the %d programmers of the %cNIAC.\n", "Betty", 6, 'E');
 
-    return 0;
+    return (0);
 }
 ```
 ## Requirements for Installation and Execution
