@@ -8,12 +8,12 @@
 int handle_character(va_list arguments_list)
 {
 	char c = va_arg(arguments_list, int);
-
-	if (c == '\0')
+/*
+* if (c == '\0')
 	{
 		return (-1);
 	}
-
+*/
 	write(1, &c, 1);
 
 	return (1);
