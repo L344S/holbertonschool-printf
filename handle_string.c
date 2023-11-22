@@ -12,11 +12,11 @@ int handle_string(va_list arguments_list)
 
 	if (string == NULL)
 	{
-		write(1, "(null)", 6);
-		return (6);
+		string = "(null)";
 	}
 
 	len_string = strlen(string);
+
 	if (len_string < 0)
 	{
 		return (-1);
