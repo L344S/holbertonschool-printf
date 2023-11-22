@@ -4,28 +4,6 @@
 
 This is a collaborative project created by a group of students. The goal is to implement a custom version of the `printf` function in C. The project is part of the curriculum at Holberton School.
 
-## Requirements
-
-- All files will be compiled on Ubuntu 20.04 LTS using gcc with the options `-Wall -Werror -Wextra -pedantic -std=gnu89`.
-- Follow the Betty style for code formatting (checked using `betty-style.pl` and `betty-doc.pl`).
-- No global variables are allowed.
-- Each file should contain no more than 5 functions.
-- Prototypes of all functions should be included in the header file named `main.h`.
-- Do not forget to push your header file.
-- Include guard for all header files.
-- Do not provide your own `_putchar` function.
-- There should be one project repository per group. Cloning or forking a project repository with the same name before the second deadline may result in a 0% score.
-
-## Authorized Functions and Macros
-
-- `write` (man 2 write)
-- `malloc` (man 3 malloc)
-- `free` (man 3 free)
-- `va_start` (man 3 va_start)
-- `va_end` (man 3 va_end)
-- `va_copy` (man 3 va_copy)
-- `va_arg` (man 3 va_arg)
-
 ## Project Structure
 
 The project is organized into multiple files, each serving a specific purpose:
@@ -57,10 +35,27 @@ int main(void)
     return 0;
 }
 ```
+## Installation
 
+Use the following command to install the custom `_printf` function:
+
+```bash
+# Clone the repository
+git clone https://github.com/L344S/holbertonschool-printf.git
+
+# Navigate to the project directory
+cd holbertonschool-printf
+
+# Compile the files
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o printf
+```
 ## Note
 
 - This project includes the creation of a man page for the custom `_printf` function.
+```
+# Display the man page of the _printf function
+man ./_printf.3.gz
+```
 
 ## Authors
 
