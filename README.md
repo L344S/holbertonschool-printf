@@ -57,7 +57,6 @@ To install and run this program, ensure you have the following:
 - **Compiler:** gcc
 - **Compiler Options:** `-Wall -Werror -Wextra -pedantic -std=gnu89`
 
-```
 ## Installation
 
 Use the following command to install the custom `_printf` function:
