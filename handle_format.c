@@ -26,6 +26,11 @@ int handle_format(char format, va_list arguments_list)
 	{
 		strFormat_leng = strFormat_leng + handle_integer(arguments_list);
 	}
+	else
+	{
+		write(1, "Invalid format specifier\n", 25);
+		return (-1);
+	}
 
 	return (strFormat_leng);
 }
