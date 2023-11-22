@@ -10,14 +10,20 @@ This is a collaborative project created by a group of students. The goal is to i
 ## Project Structure
 
 The project is organized into multiple files, each serving a specific purpose:
+[\_printf.c](https://github.com/L344S/holbertonschool-printf/blob/main/_printf.c)
+- [handle_character.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_character.c)
+- [handle_format.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_format.c)
+- [handle_integer.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_integer.c)
+- [handle_percent.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_percent.c)
+- [handle_string.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_string.c)
 
-- **_printf.c**: The main file containing the custom `_printf` function.
+
+- [\_printf.c](https://github.com/L344S/holbertonschool-printf/blob/main/_printf.c): The main file containing the custom `_printf` function.
 - **handle_character.c**: File handling the character conversion specifier.
 - **handle_format.c**: File managing the format specifier.
 - **handle_integer.c**: File dealing with the integer conversion specifier.
 - **handle_percent.c**: File for handling the percent symbol conversion specifier.
 - **handle_string.c**: File for handling the string conversion specifier.
-- **main.c**: Example file for testing functions (Note: Do not push your own main.c file).
 
 ## How to Use
 
