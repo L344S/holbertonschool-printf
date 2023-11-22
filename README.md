@@ -26,12 +26,26 @@ The project is organized into multiple files, each serving a specific purpose:
 
 To use the custom `_printf` function, include the "main.h" header file in your C program and call the function with the desired format string.
 
-```
+```c
 #include "main.h"
 
 int main(void)
 {
+    /* Print a string */
     _printf("Hello, %s!\n", "World");
+
+    /* Print a character */
+    _printf("The first letter of the name Holberton is : %c\n", 'H');
+
+    /* Print an integer */
+    _printf("We are students from cohort C%d.\n", 22);
+
+    /* Print a percent symbol */
+    _printf("We hope to get 100%% on this project.\n");
+
+    /* Combining multiple format specifiers */
+    _printf("Nicknamed %s, she was one of the %d programmers of the %cNIAC.\n", "Betty", 6, 'E');
+
     return 0;
 }
 ```
@@ -52,7 +66,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o printf
 ## Note
 
 - This project includes the creation of a man page for the custom `_printf` function.
-```
+```bash
 # Display the man page of the _printf function
 man ./_printf.3.gz
 ```
