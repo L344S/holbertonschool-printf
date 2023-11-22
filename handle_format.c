@@ -28,7 +28,7 @@ int handle_format(char format, va_list arguments_list)
 	}
 	else
 	{
-		write(1, "Invalid format specifier\n", 25);
+		write(1, "format not handled", 19);
 		return (-1);
 	}
 
