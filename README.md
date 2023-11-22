@@ -26,24 +26,15 @@ This is a collaborative project created by a group of students. The goal is to i
 - `va_copy` (man 3 va_copy)
 - `va_arg` (man 3 va_arg)
 
-## Project Links
-- [\_printf.c](https://github.com/L344S/holbertonschool-printf/blob/main/_printf.c)
-- [handle_character.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_character.c)
-- [handle_format.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_format.c)
-- [handle_integer.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_integer.c)
-- [handle_percent.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_percent.c)
-- [handle_string.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_string.c)
-
 ## Project Structure
 
 The project is organized into multiple files, each serving a specific purpose:
-
-- **_printf.c**: The main file containing the custom `_printf` function.
-- **handle_character.c**: File handling the character conversion specifier.
-- **handle_format.c**: File managing the format specifier.
-- **handle_integer.c**: File dealing with the integer conversion specifier.
-- **handle_percent.c**: File for handling the percent symbol conversion specifier.
-- **handle_string.c**: File for handling the string conversion specifier.
+- [\_printf.c](https://github.com/L344S/holbertonschool-printf/blob/main/_printf.c) - The main file containing the custom `_printf` function.
+- [handle_character.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_character.c) - File handling the character conversion specifier.
+- [handle_format.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_format.c) - File managing the format specifier.
+- [handle_integer.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_integer.c) - File dealing with the integer conversion specifier.
+- [handle_percent.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_percent.c) - File for handling the percent symbol conversion specifier.
+- [handle_string.c](https://github.com/L344S/holbertonschool-printf/blob/main/handle_string.c) - File for handling the string conversion specifier.
 
 ## Functionality
 
