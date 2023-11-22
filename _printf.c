@@ -1,5 +1,58 @@
 #include "main.h"
 
+/**
+ * handle_char - Handles the 'c' format specifier
+ * @arguments_list: va_list containing the arguments
+ * Return: number of characters printed
+ */
+int handle_char(va_list arguments_list)
+{
+	char c = va_arg(arguments_list, int);
+	write(1, &c, 1);
+	return (1);
+}
+
+/**
+ * handle_string - Handles the 's' format specifier
+ * @arguments_list: va_list containing the arguments
+ * Return: number of characters printed
+ */
+int handle_string(va_list arguments_list)
+{
+	char *string = va_arg(arguments_list, char*);
+	int len_string = strlen(string);
+	write(1, string, len_string);
+	return (len_string);
+}
+
+/**
+ * handle_percent - Handles the '%%' format specifier
+ * Return: number of characters printed
+ */
+int handle_percent(void)
+{
+	write(1, "%", 1);
+	return (1);
+}
+
+/**
+ * handle_int - Handles the 'd' and 'i' format specifiers
+ * @arguments_list: va_list containing the arguments
+ * Return: number of characters printed
+ */
+int handle_int(va_list arguments_list)
+{
+	int len_integer;
+	int integer = va_arg(arguments_list, int);
+
+	char buffer[50];
+	sprintf(buffer, "%d", integer);
+	len_integer = strlen(buffer);
+
+	write(1, buffer, len_integer);
+
+	return (len_integer);
+}
 
 /**
  * _printf - function that produces output according to a format.
@@ -7,105 +60,50 @@
  * Description: replica of the printf function of the standard library
  * Return: number of characters printed excluding the null byte
  */
-
 int _printf(const char *format, ...)
 {
-	/* création de la variable index nécessaire à notre boucle*/
-	int index;
-	/* création de la variable qui va contenir le nombre de caractère imprimer*/
-	int strFormat_leng = 0;
+	int index, strFormat_leng = 0;
 
-	/* création de la variable qui va contenir notre liste d'arguments */
 	va_list arguments_list;
 
-	/* Vérifier si le format est vide ou ne contient pas de '%' */
-	/* si la format string est null alors on s'arrête là */
 	if (format == NULL || format[0] == '\0')
 		return (-1);
 
-	/* on vient remplir notre variable avec les arguments */
 	va_start(arguments_list, format);
 
-	/* on va faire une boucle pour parcourir toute le caractère de format*/
 	for (index = 0; format[index] != '\0'; index++)
 	{
-		/* s'il n'y a aucun format specifier alors on print*/
 		if (format[index] != '%')
 		{
-			/* utlisation de la fonction write pour display le texte dans stdout*/
 			write(1, &format[index], 1);
-			/* on incrémente notre variable qui conmpte le nb de char*/
 			strFormat_leng++;
 		}
 		else
 		{
-			/* si la string contient % alors on regarde le caractère qui le suit*/
-			/* et on adapter la suite au format specifier*/
 			index++;
 
-			/* si le caractère qui suit le % est un c*/
 			if (format[index] == 'c')
 			{
-				/* on récupère la valeur en argument attribué à c et on la print*/
-				char c = va_arg(arguments_list, int);
-
-				write(1, &c, 1);
-				/* on incrémente le nombre de charactère imprimés*/
-				strFormat_leng++;
+				strFormat_leng = strFormat_leng + handle_char(arguments_list);
 			}
-			/* si le caractère qui suit le % est un c*/
 			else if (format[index] == 's')
 			{
-				/* on récupère la valeur en argument attribué à s*/
-				char *string = va_arg(arguments_list, char*);
-
-				int len_string = strlen(string);
-				/* on print la string à la place du format specifier*/
-				write(1, string, len_string);
-				/* on incrémente notre variable en y ajoutant la longueur de la string*/
-				strFormat_leng = strFormat_leng + len_string;
-			}
-			else if (format[index] == 'd')
-			{
-				/* on récupère la valeur en argument attribué à d (un entier) */
-				int integer = va_arg(arguments_list, int);
-
-				/* Convertissez l'entier en une chaîne de caractères à l'aide de snprintf */
-				char buffer[12]; // Suffisamment grand pour stocker un int
-				int len_integer = snprintf(buffer, sizeof(buffer), "%d", integer);
-
-				/* Vérifiez si la conversion s'est déroulée avec succès */
-				if (len_integer < 0 || len_integer >= sizeof(buffer)) {
-					// Gestion de l'erreur ici si la conversion a échoué
-				}
-
-				/* Affichez la chaîne de caractères représentant l'entier */
-				write(1, buffer, len_integer);
-
-				/* Incrémente strFormat_leng en ajoutant la longueur de la chaîne de caractères */
-				strFormat_leng = strFormat_leng + len_integer;
+				strFormat_leng = strFormat_leng + handle_string(arguments_list);
 			}
 			else if (format[index] == '%')
 			{
-				/* utlisation de la fonction write pour display le texte dans stdout*/
-				write(1, &format[index], 1);
-				/* on incrémente le nombre de charactère imprimés*/
-				strFormat_leng++;
+
+				strFormat_leng = strFormat_leng + handle_percent();
+			}
+			else if (format[index] == 'd' || format[index] == 'i')
+			{
+
+				strFormat_leng = strFormat_leng + handle_int(arguments_list);
 			}
 		}
 	}
-	/* clean up de va_list*/
+
 	va_end(arguments_list);
 
-	/*on return comme demandé la nombre de caractère imprimer*/
 	return (strFormat_leng);
-}
-
-int main(void)
-{
-    int TestVariable0 = 10;
-    _printf("Test %d\n", TestVariable0);
-    char *TestVariable1 = "Hello World";
-    _printf("Test %s\n", TestVariable1);
-    return 0;
 }
