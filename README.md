@@ -64,5 +64,6 @@ int main(void)
 
 ## Authors
 
-- Léa & Maël
+- [Léa](https://github.com/L344S)
+- [Maël](https://github.com/maelpseudo)
 
