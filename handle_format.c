@@ -28,7 +28,6 @@ int handle_format(char format, va_list arguments_list)
 	}
 	else
 	{
-		write(1, "Invalid format specifier", 25);
 		strFormat_leng = -1;
 	}
 
