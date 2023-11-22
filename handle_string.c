@@ -17,6 +17,10 @@ int handle_string(va_list arguments_list)
 	}
 
 	len_string = strlen(string);
+	if (len_string < 0)
+	{
+		return (-1);
+	}
 
 	write(1, string, len_string);
 
