@@ -9,9 +9,6 @@
 int main(void)
 {
 	int len, len2;
-
-	int len_test, len_test2;
-
 	unsigned int ui;
 
 	void *addr;
@@ -44,5 +41,17 @@ int main(void)
 	_printf("Unknown:[%r]\n");
 	printf("Unknown:[%r]\n");
 	printf("-------------------CALCUL LENG-------------------------");
-	return (0);
+	len = _printf("%!\n");
+	len2 = printf("%!\n");
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	} else
+    {
+		printf("Lengths match.\n");
+		return (0);
+    }
 }
