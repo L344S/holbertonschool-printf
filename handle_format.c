@@ -29,7 +29,7 @@ int handle_format(char format, va_list arguments_list)
 	else
     {
         write(1, &format, 1);
-        return (0);
+        return (1);
     }
 
 	return (strFormat_leng);
