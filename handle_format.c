@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * handle_format - Handles the format specifier
- * @format: The format specifier character
- * @arguments_list: va_list containing the arguments
- * Return: number of characters printed
- */
+* handle_format - Handles the format specifier
+* @format: The format specifier character
+* @arguments_list: va_list containing the arguments
+* Return: number of characters printed
+*/
 int handle_format(char format, va_list arguments_list)
 {
 int strFormat_leng = 0;
@@ -29,8 +29,7 @@ strFormat_leng = strFormat_leng + handle_integer(arguments_list);
 else
 {
 write(1, &format, 1);
-return (0);
+return (1);
 }
-
 return (strFormat_leng);
 }
