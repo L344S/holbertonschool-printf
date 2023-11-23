@@ -27,10 +27,10 @@ int handle_format(char format, va_list arguments_list)
 		strFormat_leng = strFormat_leng + handle_integer(arguments_list);
 	}
 	else
-	{
-		write(1, "format not handled", 19);
-		return (-1);
-	}
+    {
+        write(1, &format, 1);
+        return (1);
+    }
 
 	return (strFormat_leng);
 }
