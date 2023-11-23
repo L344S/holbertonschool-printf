@@ -7,15 +7,13 @@
  */
 int handle_integer(va_list arguments_list)
 {
-	int len_integer;
-	int integer = va_arg(arguments_list, int);
-	char buffer[50];
+int len_integer;
+int integer = va_arg(arguments_list, int);
+char buffer[50];
 
-	sprintf(buffer, "%d", integer);
+sprintf(buffer, "%d", integer);
 
-	len_integer = strlen(buffer);
-
-	write(1, buffer, len_integer);
-
-	return (len_integer);
+len_integer = strlen(buffer);
+write(1, buffer, len_integer);
+return (len_integer);
 }
