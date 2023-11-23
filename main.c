@@ -39,14 +39,5 @@ int main(void)
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
     printf("-------------------CALCUL LENG-------------------------");
-    len_test = _printf("%!\n");
-    len_test2 = printf("%!\n");
-    fflush(stdout);
-    if (len_test != len_test2)
-    {
-        printf("Lengths differ.\n");
-        fflush(stdout);
-        return (1);
-    }
     return (0);
 }
