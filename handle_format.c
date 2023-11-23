@@ -29,7 +29,7 @@ strFormat_leng = strFormat_leng + handle_integer(arguments_list);
 else
 {
 write(1, &format, 1);
-return (1);
+strFormat_leng += 1;
 }
 return (strFormat_leng);
 }
