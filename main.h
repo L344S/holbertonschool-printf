@@ -15,5 +15,7 @@ int handle_percent(void);
 int handle_integer(va_list arguments_list);
 /*Handle all format*/
 int handle_format(char format, va_list arguments_list);
+/*Advanced tasks*/
+int handle_pointer(va_list arguments_list);
 
 #endif
