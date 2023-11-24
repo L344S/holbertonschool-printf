@@ -49,6 +49,14 @@ int main(void)
     return (0);
 }
 ```
+### Expected output : 
+```c
+Hello, World!
+The first letter of the name Holberton is : H
+We are students from cohort C22.
+We hope to get 100% on this project.
+Nicknamed Betty, she was one of the 6 programmers of the ENIAC.
+```
 ## Requirements for Installation and Execution
 
 To install and run this program, ensure you have the following:
