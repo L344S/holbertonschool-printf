@@ -47,5 +47,5 @@ int handle_format(char format, va_list arguments_list)
 		strFormat_leng = strFormat_leng + 2;
 	}
     /* On retourne le nombre total de caractères dans la format string*/
-	return (strFormat_leng);
+	return (strFormat_leng - 1);
 }
