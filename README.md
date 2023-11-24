@@ -84,7 +84,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o printf
 - This project includes the creation of a man page for the custom `_printf` function.
 ```bash
 # Display the man page of the _printf function
-man ./_printf.3.gz
+man ./man_3_printf
 ```
 ## Contributing
 
