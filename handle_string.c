@@ -19,7 +19,7 @@ int handle_string(va_list arguments_list)
 
     /* On calcule le nombre de char dans string*/
     /* On attribue ce nombre à len_string*/
-	len_string = strlen(string - 1);
+	len_string = strlen(string);
 
     /* On print string dans stdout*/
 	write(1, string, len_string);
