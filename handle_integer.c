@@ -13,7 +13,7 @@ int handle_integer(va_list arguments_list)
     /* Variable integer avec pour valeur le prochain argument en paramètre*/
 	int integer = va_arg(arguments_list, int);
     /* Variable buffer qui va stocker la conversion l'integer en string*/
-	char buffer[50];
+	char buffer[1024];
 
     /* On appelle la fonction sprintf qui va convertir l'integer en string*/
     /* On stock le résultat dans buffer*/
