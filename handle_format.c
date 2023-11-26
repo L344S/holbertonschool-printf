@@ -9,7 +9,6 @@
 */
 int handle_format(char format, va_list arguments_list)
 {
-	/* Variable strFormat_leng qui va compter le nombre de char dans format*/
 	int strFormat_leng = 0;
 
 	/* On check le format specifier*/
@@ -43,13 +42,11 @@ int handle_format(char format, va_list arguments_list)
 	}
 	/* Sinon cela signifie que le format specifier n'est pas valide*/
 	/* On print '%' qui a était skip et le format specifier*/
-	/* On incrémente strFormat_leng de 2*/
 	else
 	{
 		write(1, "%", 1);
 		write(1, &format, 1);
 		strFormat_leng = strFormat_leng + 2;
 	}
-	/* On retourne le nombre total de caractères dans la format string*/
 	return (strFormat_leng);
 }

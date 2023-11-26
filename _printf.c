@@ -15,7 +15,8 @@ int _printf(const char *format, ...)
 	va_list arguments_list;
 
 	/* Check si format est NULL ou si format est vide*/
-	if (format == NULL || format[0] == '\0')
+	if (format == NULL || format[0] == '\0' ||
+	(format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
 	/* Initialisation de arguments_list --> attribution des arguments en value*/
