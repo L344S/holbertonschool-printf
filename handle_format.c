@@ -38,8 +38,6 @@ int handle_format(char format, va_list arguments_list)
 	}
 	else if (format == 'p')
 	{
-		if (format == NULL || format[0] == '\0')
-		return (0);
 		strFormat_leng = strFormat_leng + handle_pointer(arguments_list);
 	}
 	else
