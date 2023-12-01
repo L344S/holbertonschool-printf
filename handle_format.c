@@ -38,10 +38,10 @@ int handle_format(char format, va_list arguments_list)
 	}
 	else if (format == 'p')
 	{
+		if (format == NULL || format[0] == '\0')
+		return (0);
 		strFormat_leng = strFormat_leng + handle_pointer(arguments_list);
 	}
-	/* Sinon cela signifie que le format specifier n'est pas valide*/
-	/* On print '%' qui a était skip et le format specifier*/
 	else
 	{
 		write(1, "%", 1);
