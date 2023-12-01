@@ -10,6 +10,11 @@ int handle_pointer(va_list arguments_list)
 {
 	int num;
 
+	if (arguments_list == NULL)
+	{
+		return (-1);
+	}
+
 	void *ptr = va_arg(arguments_list, void *);
 
 	char *buffer = malloc(20);
