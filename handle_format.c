@@ -11,6 +11,8 @@ int handle_format(char format, va_list arguments_list)
 {
 	int strFormat_leng = 0;
 
+	// if (format == NULL || format[0] == '\0')
+	// return (0);
 	/* On check le format specifier*/
 	/* Si c'est un 'c' alors on appelle la fonction handle_character*/
 	/* On incrémente strFormat_leng du nombre de char retourné par la func*/
